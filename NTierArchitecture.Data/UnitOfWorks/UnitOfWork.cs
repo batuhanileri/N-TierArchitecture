@@ -24,12 +24,14 @@ namespace NTierArchitecture.Data.UnitOfWorks
 
         private EfWriterDal _writerRepository;
 
-        public IAboutDal Abouts => _aboutRepository = _aboutRepository ?? new EfAboutDal(_context);
-        public ICategoryDal Categories => _categoryRepository = _categoryRepository ?? new EfCategoryDal(_context);
-        public IContactDal Contacts => _contactRepository = _contactRepository ?? new EfContactDal(_context);
+        public IAboutDal About => _aboutRepository = _aboutRepository ?? new EfAboutDal(_context);
+        public ICategoryDal Category => _categoryRepository = _categoryRepository ?? new EfCategoryDal(_context);
+        public IContactDal Contact => _contactRepository = _contactRepository ?? new EfContactDal(_context);
         public ICommentDal Comment => _commentRepository= _commentRepository?? new EfCommentDal(_context);
         public IBlogDal Blog => _blogRepository = _blogRepository ?? new EfBlogDal(_context);
         public IWriterDal Writer => _writerRepository = _writerRepository ?? new EfWriterDal(_context);
+
+        
 
         public UnitOfWork(Context context)
         {

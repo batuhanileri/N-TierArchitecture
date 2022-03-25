@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NTierArchitecture.Core.Data;
 using NTierArchitecture.Data.Abstract;
 using System;
 using System.Collections.Generic;

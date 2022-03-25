@@ -1,4 +1,5 @@
-﻿using NTierArchitecture.Entity.Concrete;
+﻿using NTierArchitecture.Core.Data;
+using NTierArchitecture.Entity.Concrete;
 
 namespace NTierArchitecture.Data.Abstract
 {

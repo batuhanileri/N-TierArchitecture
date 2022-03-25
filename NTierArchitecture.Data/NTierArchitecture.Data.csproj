@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NTierArchitecture.Core\NTierArchitecture.Core.csproj" />
     <ProjectReference Include="..\NTierArchitecture.Entity\NTierArchitecture.Entity.csproj" />
   </ItemGroup>
 

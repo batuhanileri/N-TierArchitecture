@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NTierArchitecture.Core\NTierArchitecture.Core.csproj" />
     <ProjectReference Include="..\NTierArchitecture.Data\NTierArchitecture.Data.csproj" />
     <ProjectReference Include="..\NTierArchitecture.Entity\NTierArchitecture.Entity.csproj" />
   </ItemGroup>

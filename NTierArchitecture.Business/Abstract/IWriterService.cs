@@ -1,4 +1,4 @@
-﻿using NTierArchitecture.Core.Data;
+﻿using NTierArchitecture.Core.Business;
 using NTierArchitecture.Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NTierArchitecture.Data.Abstract
+namespace NTierArchitecture.Business.Abstract
 {
-    public interface ICategoryDal: IEntityRepository<Category>
+    public interface IWriterService : IService<Writer>
     {
+
     }
 }
