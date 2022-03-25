@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NTierArchitecture.Data\NTierArchitecture.Data.csproj" />
+    <ProjectReference Include="..\NTierArchitecture.Entity\NTierArchitecture.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,7 +1,10 @@
-﻿namespace NTierArchitecture.Entity.Concrete
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NTierArchitecture.Entity.Concrete
 {
     public class Writer
     {
+        [Key]
         public int WriterId { get; set; }
         public string Name { get; set; }
         public string Mail { get; set; }
@@ -10,4 +13,5 @@
         public bool Status { get; set; }
         public string Image { get; set; }
     }
+
 }

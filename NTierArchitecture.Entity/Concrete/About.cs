@@ -1,7 +1,10 @@
-﻿namespace NTierArchitecture.Entity.Concrete
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NTierArchitecture.Entity.Concrete
 {
     public class About
     {
+        [Key]
         public int AboutId { get; set; }
         public string Details1 { get; set; }
         public string Details2 { get; set; }

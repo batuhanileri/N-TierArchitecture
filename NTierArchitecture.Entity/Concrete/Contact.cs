@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace NTierArchitecture.Entity.Concrete
 {
     public class Contact
     {
+        [Key]
         public int ContactId { get; set; }
         public string ContactName { get; set; }
         public string ContactMail { get; set; }
