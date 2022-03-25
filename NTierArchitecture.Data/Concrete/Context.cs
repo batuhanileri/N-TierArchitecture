@@ -10,11 +10,11 @@ namespace NTierArchitecture.Data.Concrete
 {
     public class Context:DbContext
     {
-        
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public Context(DbContextOptions<Context> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-AOMM71G;Integrated Security=True;Initial Catalog=NtierArchDb; Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
         }
+        
         public DbSet<Writer> Writers { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }

@@ -25,7 +25,7 @@ namespace NTierArchitecture.Data.UnitOfWorks
         private EfWriterDal _writerRepository;
 
         public IAboutDal About => _aboutRepository = _aboutRepository ?? new EfAboutDal(_context);
-        public ICategoryDal Category => _categoryRepository = _categoryRepository ?? new EfCategoryDal(_context);
+        public ICategoryDal Category  => _categoryRepository = _categoryRepository ?? new EfCategoryDal(_context);
         public IContactDal Contact => _contactRepository = _contactRepository ?? new EfContactDal(_context);
         public ICommentDal Comment => _commentRepository= _commentRepository?? new EfCommentDal(_context);
         public IBlogDal Blog => _blogRepository = _blogRepository ?? new EfBlogDal(_context);

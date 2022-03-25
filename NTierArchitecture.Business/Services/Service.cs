@@ -39,7 +39,6 @@ namespace NTierArchitecture.Business.Services
             await _repository.AddRangeAsync(entities);
             await _unitOfWork.CommitAsync();
             return entities;
-
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null)
