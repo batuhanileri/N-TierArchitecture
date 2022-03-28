@@ -19,6 +19,7 @@ namespace NTierArchitecture.Core.Data
         Task AddAsync(TEntity entity);
         Task AddRangeAsync(IEnumerable<TEntity> entities); //Birden fazla kayıt olabilir.
         void Remove(TEntity entity);
+       
         void RemoveRange(IEnumerable<TEntity> entities);
         TEntity Update(TEntity entity);
         void Add(TEntity entity);

@@ -1,5 +1,6 @@
 ﻿using NTierArchitecture.Data.Abstract;
 using NTierArchitecture.Entity.Concrete;
+using NTierArchitecture.Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace NTierArchitecture.Data.Concrete
         public EfCategoryDal(Context context) : base(context)
         {
         }
+
     }
 }

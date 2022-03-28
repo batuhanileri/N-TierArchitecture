@@ -51,5 +51,32 @@ namespace NTierArchitecture.MVC.Controllers
             return RedirectToAction("GetAll");
 
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+
+            var category = await _categoryService.GetByIdAsync(id);
+
+            return View(_mapper.Map<CategoryDto>(category));
+        }
+
+        [HttpPost]
+        public IActionResult Edit(CategoryDto categoryDto)
+        {
+           
+              _categoryService.Update(_mapper.Map<Category>(categoryDto));
+
+              return RedirectToAction("GetAll");
+
+        }
+       
+        public async Task<IActionResult> Delete(int id)
+        {
+            
+            var category = await _categoryService.GetByIdAsync(id);
+
+             _categoryService.Remove(category);
+
+            return RedirectToAction("GetAll");
+        }
     }
 }

@@ -76,5 +76,7 @@ namespace NTierArchitecture.Data.Concrete
             addedEntity.State = EntityState.Added;
             _context.SaveChanges();
         }
+
+        
     }
 }
