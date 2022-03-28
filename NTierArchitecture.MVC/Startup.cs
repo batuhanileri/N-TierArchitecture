@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NTierArchitecture.Data.Concrete;
+using NTierArchitecture.MVC.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,8 @@ namespace NTierArchitecture.MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            services.AddControllers();
+
+           
 
             services.AddDbContext<Context>(options =>
             {
@@ -34,6 +35,9 @@ namespace NTierArchitecture.MVC
                      , o => { o.MigrationsAssembly("NTierArchitecture.Data"); }).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
             });
+            services.AddAutoMapper(typeof(MapProfile));
+            services.AddControllersWithViews();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

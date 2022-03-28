@@ -10,7 +10,7 @@ namespace NTierArchitecture.Data.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Context _context;
+        public readonly Context _context;
     
         private EfCategoryDal _categoryRepository;
 

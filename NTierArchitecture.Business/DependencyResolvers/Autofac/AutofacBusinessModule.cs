@@ -18,21 +18,19 @@ namespace NTierArchitecture.Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
-          
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterGeneric(typeof(Service<>)).As(typeof(IService<>));
+            builder.RegisterGeneric(typeof(EfEntityRepositoryBase<>)).As(typeof(IEntityRepository<>));
 
             builder.RegisterType<CategoryManager>().As<ICategoryService>();
 
-            builder.RegisterType<AboutManager>().As<IAboutService>().SingleInstance();
-            builder.RegisterType<BlogManager>().As<IBlogService>().SingleInstance();
-            builder.RegisterType<CommentManager>().As<ICommentService>().SingleInstance();
-            builder.RegisterType<ContactManager>().As<IContactService>().SingleInstance();
-            builder.RegisterType<WriterManager>().As<IWriterService>().SingleInstance();
+            builder.RegisterType<AboutManager>().As<IAboutService>();
+            builder.RegisterType<BlogManager>().As<IBlogService>();
+            builder.RegisterType<CommentManager>().As<ICommentService>();
+            builder.RegisterType<ContactManager>().As<IContactService>();
+            builder.RegisterType<WriterManager>().As<IWriterService>();
 
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance();
-
-
-            builder.RegisterGeneric(typeof(Service<>)).As(typeof(IService<>)).InstancePerDependency();
-            builder.RegisterGeneric(typeof(EfEntityRepositoryBase<>)).As(typeof(IEntityRepository<>)).InstancePerDependency();
+           
 
            
         }

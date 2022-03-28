@@ -1,6 +1,7 @@
 ﻿using NTierArchitecture.Core.Business;
 using NTierArchitecture.Core.Data;
 using NTierArchitecture.Data.Abstract;
+using NTierArchitecture.Data.Concrete;
 using NTierArchitecture.Data.UnitOfWorks;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,12 @@ namespace NTierArchitecture.Business.Services
     {
         public readonly IUnitOfWork _unitOfWork;
         public readonly IEntityRepository<TEntity> _repository;
+        
         public Service(IUnitOfWork unitOfWork, IEntityRepository<TEntity> repository)
         {
             _unitOfWork = unitOfWork;
             _repository = repository;
+            
         }
 
         public async Task<TEntity> AddAsync(TEntity entity)
