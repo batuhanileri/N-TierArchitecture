@@ -15,17 +15,14 @@ namespace NTierArchitecture.MVC.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ICategoryService _categoryService;
-        private readonly Context _context;
-        public CategoryController(IMapper mapper, ICategoryService categoryService,Context context)
+       
+        public CategoryController(IMapper mapper, ICategoryService categoryService)
         {
             _mapper = mapper;
             _categoryService = categoryService;
-            _context = context;
+            
         }
-        public async Task CommitAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
+       
 
         public async Task<IActionResult> GetAll()
         {
