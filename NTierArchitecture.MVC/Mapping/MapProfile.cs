@@ -17,8 +17,9 @@ namespace NTierArchitecture.MVC.Mapping
             CreateMap<Category, CategoryDto>();
             CreateMap<CategoryDto, Category>();
 
+            CreateMap<Writer, RegisterDto>();
+            CreateMap<RegisterDto, Writer>();
 
-            
 
 
         }
